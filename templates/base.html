@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>dpaste.de: {% block title %}New snippet{% endblock %}</title>
+	<link rel="stylesheet" media="screen, projection" href="{{ MEDIA_URL }}theme.css"/>
+	{% block extrahead %}{% endblock %}
+</head>
+<body>
+
+<div id="header">
+    <span class="new_snippet"><a href="{% url snippet_new %}">New snippet &rarr;</a></span>
+	{% block headline %}{% endblock %}
+</div>
+
+<div id="sidebar">
+	{% block sidebar %}{% endblock %}
+</div>
+
+
+<div id="content">
+	{% block content %}{% endblock %}
+</div>
+<div id="footer">
+	<a href="{% url snippet_userlist %}">Recent snippets</a>
+	<a href="{% url snippet_userprefs %}?next={{ request.build_absolute_url }}">Settings</a>
+	<a href="{% url about %}">About</a>
+</div>
+
+{% block script_footer %}{% endblock %}
+
+</body>
+</html>

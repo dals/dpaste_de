@@ -1,0 +1,17 @@
+################################################
+# This is an example wsgi script that currently
+# runs dpaste.de. Remove this comment until the
+# shebang line.
+################################################
+
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os, sys
+sys.stdout = sys.stderr
+
+sys.path.insert(0, '/path/to/parent/of/dpaste_de/')
+os.environ['DJANGO_SETTINGS_MODULE'] = 'dpaste_de.settings'
+
+import django.core.handlers.wsgi
+application = django.core.handlers.wsgi.WSGIHandler()

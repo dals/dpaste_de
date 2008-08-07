@@ -48,7 +48,6 @@ TIME_ZONE = 'UTC'
 LANGUAGE_CODE = 'en'
 LANGUAGES = (
     ('en', 'English'),
-    ('de', 'German'),
 )
 
 SITE_ID = 1
@@ -96,6 +95,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.admin',
     'dpaste',
     'mptt',
 )

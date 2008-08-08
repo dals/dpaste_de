@@ -98,6 +98,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'dpaste',
     'mptt',
+    'extensions',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

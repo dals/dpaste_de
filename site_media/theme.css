@@ -163,12 +163,12 @@ form.snippetform ol li{
 }
 
 form.snippetform label{
-    width: 100px;
+    width: 125px;
     float: left;
 }
 
 form.snippetform #id_content{
-    width: 85%;
+    width: 80%;
     height: 290px;
 }
 
@@ -179,7 +179,7 @@ form.snippetform #id_title{
 }
 
 form.snippetform li.submit input{
-    margin-left: 100px;
+    margin-left: 125px;
 }
 
 form.snippetform ul.errorlist,
@@ -270,6 +270,16 @@ div.tree div.submit input{
     position: fixed;
     right: 1em;
     bottom: 1em;
+}
+
+#footer form.setlang{
+    display: inline;
+    padding-right: 15px;
+}
+
+#footer form.setlang input,
+#footer form.setlang select{
+    font-size: 0.8em;
 }
 
 #footer a:link,

@@ -4,14 +4,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<title>dpaste.de: {% block title %}New snippet{% endblock %}</title>
+    <title>dpaste.de: {% block title %}{% trans "New snippet" %}{% endblock %}</title>
 	<link rel="stylesheet" media="screen, projection" href="{{ MEDIA_URL }}theme.css"/>
 	{% block extrahead %}{% endblock %}
 </head>
 <body>
 
 <div id="header">
-    <span class="new_snippet"><a href="{% url snippet_new %}">New snippet &rarr;</a></span>
+    <span class="new_snippet"><a href="{% url snippet_new %}">{% trans "New snippet" %} &rarr;</a></span>
 	{% block headline %}{% endblock %}
 </div>
 
@@ -24,9 +24,17 @@
 	{% block content %}{% endblock %}
 </div>
 <div id="footer">
-	<a href="{% url snippet_userlist %}">Recent snippets</a>
-	<a href="{% url snippet_userprefs %}?next={{ request.build_absolute_url }}">Settings</a>
-	<a href="{% url about %}">About</a>
+    <form action="/i18n/setlang/" method="post" class="setlang">
+        <select name="language">
+            {% for lang in LANGUAGES %}
+            <option {% ifequal LANGUAGE_CODE lang.0 %}selected="selected"{% endifequal %} value="{{ lang.0 }}">{{ lang.1 }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Go" />
+    </form>
+    <a href="{% url snippet_userlist %}">{% trans "Recent snippets" %}</a>
+    <a href="{% url snippet_userprefs %}?next={{ request.build_absolute_url }}">{% trans "Settings" %}</a>
+    <a href="{% url about %}">{% trans "About" %}</a>
 </div>
 
 {% block script_footer %}{% endblock %}

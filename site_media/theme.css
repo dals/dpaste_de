@@ -160,6 +160,7 @@ form.snippetform ol li{
     margin: 0;
     padding: 5px 10px;
     border-bottom: 1px solid #EEE;
+	clear: left;
 }
 
 form.snippetform label{

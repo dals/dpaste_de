@@ -122,6 +122,12 @@ div.snippet{
     overflow: auto;
 }
 
+div.snippet-options{
+    float: right;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
 div.snippet table{
     margin: 0;
     padding: 0;
@@ -308,6 +314,14 @@ pre.code {
     line-height: 17px;
     margin: 0;
     padding: 0;
+}
+
+pre.code div.line:hover{
+    background-color: #FFFFE6;
+}
+
+pre.code div.line.marked{
+    background-color: #FFFFCC;
 }
 
 .code .c { color: #999988; font-style: italic } /* Comment */

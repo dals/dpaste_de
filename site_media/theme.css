@@ -320,8 +320,9 @@ pre.code div.line:hover{
     background-color: #FFFFE6;
 }
 
-pre.code div.line.marked{
-    background-color: #FFFFCC;
+pre.code div.line.marked,
+pre.code div.line.marked *{
+    background-color: #BAE688 !important;
 }
 
 .code .c { color: #999988; font-style: italic } /* Comment */

@@ -101,7 +101,7 @@ INSTALLED_APPS = (
     'dpaste',
     'mptt',
     'extensions',
-    'command_extensions',
+    'django_extensions',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

@@ -101,6 +101,7 @@ INSTALLED_APPS = (
     'dpaste',
     'mptt',
     'extensions',
+    'command_extensions',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
